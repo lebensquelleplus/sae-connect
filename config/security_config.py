@@ -1,4 +1,5 @@
-
+import os
+from pathlib import Path
 
 class SecurityConfig:
     """Sicherheitseinstellungen"""
