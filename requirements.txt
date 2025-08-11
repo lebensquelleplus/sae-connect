@@ -1,1 +1,13 @@
 streamlit
+pandas
+email-validator
+numpy
+charset-normalizer
+cryptography
+PyJWT
+plotly
+python-dateutil
+toml
+ratelimit
+jsonschema
+typing-extensions
