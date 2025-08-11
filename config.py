@@ -9,9 +9,9 @@ class AppConfig:
     """Hauptkonfiguration der Anwendung"""
     
     # App Metadaten
-    APP_NAME = "Gmail Cancellation Tracker"
-    VERSION = "2.0.0"
-    DESCRIPTION = "Moderne Anwendung zum Durchsuchen von Gmail nach Stornierungsanfragen"
+    APP_NAME = "ARC"
+    VERSION = "1.0.1"
+    DESCRIPTION = "Anwendung für nahtlose Auftragsprozesse. Eine intelligente Erweiterung zum bestehenden System."
     
     # Gmail Konfiguration
     GMAIL_IMAP_SERVER = "imap.gmail.com"
