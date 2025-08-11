@@ -14,7 +14,7 @@ from dataclasses import dataclass
 
 # from config import AppConfig, SecurityConfig
 from ../config/app_config import AppConfig
-from ../config/security_configuration import SecurityConfig
+from ../config/security_config import SecurityConfig
 
 @dataclass
 class EmailData:
