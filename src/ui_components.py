@@ -249,10 +249,16 @@ class UIComponents:
             help="Fokus auf Amazon-spezifische E-Mails"
         )
         
-        filter_recent = st.checkbox(
+filter_ebay = st.checkbox(
+ "Ebay-Bestellungen",
+value=True,
+help=""
+)
+
+        """filter_recent = st.checkbox(
             "🕐 Nur letzte 7 Tage",
             help="Nur sehr aktuelle E-Mails"
-        )
+        )"""
         
         # Export-Vorschau
         st.markdown("**📤 Export-Format:**")
