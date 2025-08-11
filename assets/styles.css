@@ -1,0 +1,444 @@
+/* Gmail Cancellation Tracker - Modern CSS Styles */
+
+/* Root Variables */
+:root {
+    --primary-color: #00f5ff;
+    --primary-dark: #00b8cc;
+    --secondary-color: #1e293b;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+    --background-dark: #0f172a;
+    --surface-dark: #1e293b;
+    --text-light: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    --glass-bg: rgba(30, 41, 59, 0.8);
+    --glass-border: rgba(148, 163, 184, 0.2);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-glow: 0 0 20px rgba(0, 245, 255, 0.3);
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease-in-out;
+    --transition-normal: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+}
+
+/* Global Styles */
+.stApp {
+    background: linear-gradient(135deg, var(--background-dark) 0%, #1a202c 100%);
+    min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--surface-dark);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Header Styles */
+.app-header {
+    background: linear-gradient(135deg, var(--glass-bg) 0%, rgba(15, 23, 42, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.app-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--success-color), var(--primary-color));
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+}
+
+.header-content h1 {
+    color: var(--text-light);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+}
+
+.header-content p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0 0;
+}
+
+/* Login Card */
+.login-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.login-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 245, 255, 0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.login-header h2 {
+    color: var(--text-light);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+
+.login-header p {
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Custom Cards */
+.custom-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+}
+
+.custom-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+/* Metrics Styling */
+.custom-metric {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.custom-metric:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-glow);
+}
+
+/* Button Styles */
+.custom-button {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+}
+
+.custom-button:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    filter: brightness(1.1);
+}
+
+.custom-button:active {
+    transform: translateY(0);
+}
+
+/* Input Styles */
+.custom-input {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-light);
+    transition: all var(--transition-fast);
+}
+
+.custom-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 245, 255, 0.1);
+    outline: none;
+}
+
+/* Table Styles */
+.custom-table {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.custom-table thead {
+    background: var(--surface-dark);
+}
+
+.custom-table th {
+    color: var(--text-light);
+    font-weight: 600;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.custom-table td {
+    color: var(--text-muted);
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.custom-table tr:hover {
+    background: rgba(0, 245, 255, 0.05);
+}
+
+/* Empty State */
+.empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    padding: 2rem;
+}
+
+.empty-content {
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.empty-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+/* App Info */
+.app-info {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Sidebar Styles */
+.css-1d391kg {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+}
+
+/* Status Indicators */
+.status-online {
+    color: var(--success-color);
+    font-weight: 600;
+}
+
+.status-offline {
+    color: var(--error-color);
+    font-weight: 600;
+}
+
+/* Loading Animations */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+    animation: spin 1s linear infinite;
+}
+
+/* Progress Bar */
+.progress-bar {
+    background: var(--surface-dark);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 8px;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, var(--primary-color), var(--success-color));
+    height: 100%;
+    transition: width var(--transition-normal);
+}
+
+/* Tooltip Styles */
+.tooltip {
+    background: var(--surface-dark);
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    box-shadow: var(--shadow-md);
+}
+
+/* Badge Styles */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    margin: 0.25rem;
+}
+
+.badge-primary {
+    background: var(--primary-color);
+    color: var(--background-dark);
+}
+
+.badge-success {
+    background: var(--success-color);
+    color: white;
+}
+
+.badge-warning {
+    background: var(--warning-color);
+    color: white;
+}
+
+.badge-error {
+    background: var(--error-color);
+    color: white;
+}
+
+/* Keyword Tags Styling */
+.keyword-tag {
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin: 2px;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.keyword-tag:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-header {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    .login-card {
+        padding: 2rem;
+    }
+    
+    .custom-card {
+        padding: 1rem;
+    }
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-light: #f8fafc;
+        --text-muted: #94a3b8;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #00ffff;
+        --border-color: #ffffff;
+        --glass-border: rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus Styles for Accessibility */
+.custom-button:focus,
+.custom-input:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .app-header,
+    .sidebar,
+    .custom-button {
+        display: none;
+    }
+    
+    .custom-card {
+        background: white;
+        border: 1px solid #000;
+        box-shadow: none;
+    }
+}
