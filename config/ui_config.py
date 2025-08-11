@@ -1,3 +1,6 @@
+import os
+from pathlib import Path
+
 class UIConfig:
     """UI-spezifische Konfiguration"""
 
