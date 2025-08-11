@@ -12,7 +12,9 @@ from typing import List, Dict, Optional, Any
 import ssl
 from dataclasses import dataclass
 
-from config import AppConfig, SecurityConfig
+# from config import AppConfig, SecurityConfig
+from ../config/app_config import AppConfig
+from ../config/security_configuration import SecurityConfig
 
 @dataclass
 class EmailData:
