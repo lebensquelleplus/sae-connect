@@ -35,3 +35,12 @@ class EmailConfig:
         'dringend', 'urgent', 'sofort', 'immediately',
         'wichtig', 'important', 'asap'
     ]
+
+# Absender Mails
+ABSENDER_MAILS = ['donotreply@amazon.com', 'ebay@ebay.com']
+
+# Betreff Filter
+BETREFF_FILTER = ['Kunde möchte Bestellung {{ Bestellnummer }} stornieren.', 'Ein Käufer möchte einen Kauf abbrechen']
+
+# Inhalt Filter
+INHALT_FILTER = ['Kunde möchte Bestellung {{ Bestellnummer }}  stornieren.', 'Käufer: {{ Käufer }}']
