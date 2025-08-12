@@ -20,9 +20,9 @@ from pathlib import Path
 project_root = Path(__file__).parent
 sys.path.append(str(project_root))
 
-from ./dsrc.gmail_client import GmailClient
-from ./dsrc.email_analyzer import EmailAnalyzer
-from ./dsrc.ui_components import UIComponents
+from dsrc.gmail_client import GmailClient
+from dsrc.email_analyzer import EmailAnalyzer
+from dsrc.ui_components import UIComponents
 #from config import AppConfig
 from config.app_config import AppConfig
 
