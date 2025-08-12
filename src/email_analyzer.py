@@ -11,8 +11,8 @@ import logging
 from collections import Counter
 
 #from config import EmailConfig, SecurityConfig
-from ../config.email_config import EmailConfig
-from ../config.security_config import SecurityConfig
+from ..config.email_config import EmailConfig
+from ..config.security_config import SecurityConfig
 from .gmail_client import EmailData
 
 @dataclass
