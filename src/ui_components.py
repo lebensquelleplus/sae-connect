@@ -11,9 +11,9 @@ from datetime import datetime, timedelta
 from typing import Dict, List, Any
 import json
 
-from ../config/app_config import AppConfig
-from ../config/ui_config import UIConfig 
-from ../config/email_config import EmailConfig
+from config.app_config import AppConfig
+from config.ui_config import UIConfig 
+from config.email_config import EmailConfig
 from .gmail_client import GmailClient
 from .email_analyzer import EmailAnalyzer
 
