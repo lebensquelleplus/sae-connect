@@ -13,8 +13,8 @@ import ssl
 from dataclasses import dataclass
 
 # from config import AppConfig, SecurityConfig
-from config.app_config import AppConfig
-from config.security_config import SecurityConfig
+from ../config.app_config import AppConfig
+from ../config.security_config import SecurityConfig
 
 @dataclass
 class EmailData:
