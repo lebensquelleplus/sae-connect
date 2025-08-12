@@ -23,8 +23,8 @@ sys.path.append(str(project_root))
 from src.gmail_client import GmailClient
 from src.email_analyzer import EmailAnalyzer
 from src.ui_components import UIComponents
-#from config import AppConfig
-from config.app_config import AppConfig
+from config import AppConfig
+#from config.app_config import AppConfig
 
 def load_custom_css():
     """Lade custom CSS Styles"""
